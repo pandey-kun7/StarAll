@@ -20,7 +20,7 @@ export default function HomePage() {
     setCurrentEvent({
       step: "init",
       progress: 5,
-      message: "Starting autonomous funding radar pipeline...",
+      message: "Starting autonomous StarAll pipeline...",
       timestamp: new Date().toISOString(),
     });
     setEventsLog([]);
@@ -101,10 +101,10 @@ export default function HomePage() {
       {/* Hero Intro */}
       {!currentRun && !isLoading && (
         <div className="max-w-2xl py-2">
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-100 tracking-tight leading-tight">
+          <h1 className="text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight leading-tight">
             Forensic investor intelligence grounded in verified funding rounds.
           </h1>
-          <p className="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
+          <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
             Discover active lead investors backed by disclosed comparable deals from the last 18 months. Every claim is linked to public primary evidence.
           </p>
         </div>
@@ -112,16 +112,16 @@ export default function HomePage() {
 
       {/* Error Alert */}
       {error && (
-        <div className="p-3.5 rounded-lg bg-red-950/30 border border-red-800/40 text-red-200 flex items-start space-x-2.5 text-xs">
-          <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
+        <div className="p-3.5 rounded-lg bg-[#fef2f2] border border-[#fecaca] text-red-900 flex items-start space-x-2.5 text-xs">
+          <AlertCircle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
           <div className="flex-1">
-            <h4 className="font-semibold text-red-300">Notice</h4>
-            <p className="text-slate-300 mt-0.5">{error}</p>
+            <h4 className="font-semibold text-red-800">Notice</h4>
+            <p className="text-red-700 mt-0.5">{error}</p>
           </div>
           <button
             type="button"
             onClick={() => setError(null)}
-            className="text-xs text-slate-400 hover:text-slate-200 font-medium"
+            className="text-xs text-stone-500 hover:text-stone-800 font-medium"
           >
             Dismiss
           </button>

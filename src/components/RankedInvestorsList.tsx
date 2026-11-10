@@ -63,17 +63,17 @@ export function RankedInvestorsList({ investors, onOpenEvidence }: RankedInvesto
   return (
     <div className="space-y-4">
       {/* Search and Filters Bar */}
-      <div className="bg-[#121722] border border-[#232d3e] rounded-xl p-3.5 shadow-sm">
+      <div className="bg-[#ffffff] border border-[#e8e4dc] rounded-xl p-3.5 shadow-xs">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2.5">
           {/* Search box */}
           <div className="relative flex-1">
-            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-3.5 h-3.5 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by firm name or portfolio deal..."
-              className="w-full pl-9 pr-3 py-1.5 bg-[#0c1017] border border-[#232d3e] rounded-lg text-xs text-slate-200 placeholder-slate-400 focus:outline-none focus:border-sky-500"
+              className="w-full pl-9 pr-3 py-1.5 bg-[#ffffff] border border-[#d6d0c4] rounded-lg text-xs text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-stone-800"
             />
           </div>
 
@@ -82,7 +82,7 @@ export function RankedInvestorsList({ investors, onOpenEvidence }: RankedInvesto
             <select
               value={stageFilter}
               onChange={(e) => setStageFilter(e.target.value)}
-              className="px-2.5 py-1.5 bg-[#0c1017] border border-[#232d3e] rounded-lg text-slate-300 focus:outline-none focus:border-sky-500 text-xs"
+              className="px-2.5 py-1.5 bg-[#ffffff] border border-[#d6d0c4] rounded-lg text-stone-800 focus:outline-none focus:border-stone-800 text-xs"
             >
               <option value="all">All stages</option>
               <option value="seed">Seed</option>
@@ -93,7 +93,7 @@ export function RankedInvestorsList({ investors, onOpenEvidence }: RankedInvesto
             <select
               value={typeFilter}
               onChange={(e) => setTypeFilter(e.target.value)}
-              className="px-2.5 py-1.5 bg-[#0c1017] border border-[#232d3e] rounded-lg text-slate-300 focus:outline-none focus:border-sky-500 text-xs"
+              className="px-2.5 py-1.5 bg-[#ffffff] border border-[#d6d0c4] rounded-lg text-stone-800 focus:outline-none focus:border-stone-800 text-xs"
             >
               <option value="all">All investor types</option>
               <option value="venture_capital">Venture capital</option>
@@ -101,22 +101,22 @@ export function RankedInvestorsList({ investors, onOpenEvidence }: RankedInvesto
               <option value="angel_network">Angel group</option>
             </select>
 
-            <label className="flex items-center space-x-1.5 px-2.5 py-1.5 bg-[#0c1017] border border-[#232d3e] rounded-lg text-slate-300 cursor-pointer select-none text-xs">
+            <label className="flex items-center space-x-1.5 px-2.5 py-1.5 bg-[#faf8f4] border border-[#e8e4dc] rounded-lg text-stone-700 cursor-pointer select-none text-xs">
               <input
                 type="checkbox"
                 checked={chequeOnly}
                 onChange={(e) => setChequeOnly(e.target.checked)}
-                className="rounded border-[#283548] bg-[#121722] text-sky-500 focus:ring-0"
+                className="rounded border-[#d6d0c4] bg-[#ffffff] text-stone-900 focus:ring-0"
               />
               <span>Disclosed cheques only</span>
             </label>
 
-            <div className="flex items-center space-x-1 border-l border-[#232d3e] pl-2">
-              <ArrowUpDown className="w-3 h-3 text-slate-400" />
+            <div className="flex items-center space-x-1 border-l border-[#e8e4dc] pl-2">
+              <ArrowUpDown className="w-3 h-3 text-stone-500" />
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-2 py-1.5 bg-[#0c1017] border border-[#232d3e] rounded-lg text-slate-300 focus:outline-none focus:border-sky-500 text-xs"
+                className="px-2 py-1.5 bg-[#ffffff] border border-[#d6d0c4] rounded-lg text-stone-800 focus:outline-none focus:border-stone-800 text-xs"
               >
                 <option value="overall">Sort by overall fit</option>
                 <option value="stage">Sort by stage match</option>
@@ -129,13 +129,13 @@ export function RankedInvestorsList({ investors, onOpenEvidence }: RankedInvesto
       </div>
 
       {/* Results Count Line */}
-      <div className="flex items-center justify-between px-1 text-xs text-slate-400">
+      <div className="flex items-center justify-between px-1 text-xs text-stone-500">
         <span>
-          Showing <strong className="text-slate-200">{filteredAndSorted.length}</strong> of{" "}
-          <strong className="text-slate-200">{investors.length}</strong> qualified investors
+          Showing <strong className="text-stone-900">{filteredAndSorted.length}</strong> of{" "}
+          <strong className="text-stone-900">{investors.length}</strong> qualified investors
         </span>
-        <span className="text-[11px] text-amber-300 flex items-center space-x-1">
-          <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+        <span className="text-[11px] text-amber-900 flex items-center space-x-1">
+          <ShieldCheck className="w-3.5 h-3.5 text-amber-700" />
           <span>Every backed deal links to primary public sources</span>
         </span>
       </div>
@@ -152,10 +152,10 @@ export function RankedInvestorsList({ investors, onOpenEvidence }: RankedInvesto
           ))}
         </div>
       ) : (
-        <div className="bg-[#121722] border border-[#232d3e] rounded-xl p-10 text-center text-slate-400">
-          <Filter className="w-6 h-6 text-slate-400 mx-auto mb-2" />
-          <h4 className="text-slate-200 font-semibold text-xs mb-1">No investors match current filter criteria</h4>
-          <p className="text-xs text-slate-400">Reset the filters or clear the search term to view all discovered investors.</p>
+        <div className="bg-[#ffffff] border border-[#e8e4dc] rounded-xl p-10 text-center text-stone-500 shadow-xs">
+          <Filter className="w-6 h-6 text-stone-400 mx-auto mb-2" />
+          <h4 className="text-stone-800 font-semibold text-xs mb-1">No investors match current filter criteria</h4>
+          <p className="text-xs text-stone-500">Reset the filters or clear the search term to view all discovered investors.</p>
           <button
             type="button"
             onClick={() => {
@@ -164,7 +164,7 @@ export function RankedInvestorsList({ investors, onOpenEvidence }: RankedInvesto
               setChequeOnly(false);
               setSearchQuery("");
             }}
-            className="mt-3 px-3 py-1.5 rounded-lg bg-[#18202e] text-slate-200 border border-[#2a364a] text-xs font-medium hover:bg-[#202b3d] transition-colors"
+            className="mt-3 px-3 py-1.5 rounded-lg bg-[#f0ece1] text-stone-800 border border-[#ded8cb] text-xs font-medium hover:bg-[#e8e2d4] transition-colors"
           >
             Clear filters
           </button>

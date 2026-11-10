@@ -39,7 +39,7 @@ export async function executeResearchPipeline(
     options?.onProgress?.(ev);
   };
 
-  emit("init", 5, "Initializing Funding Radar pipeline and verifying credentials...");
+  emit("init", 5, "Initializing StarAll intelligence pipeline and verifying credentials...");
 
   // Step 1: Understand Startup
   emit("profile", 15, "Analyzing startup description and synthesizing investment thesis...");
@@ -135,7 +135,7 @@ export async function executeResearchPipeline(
   const rankedInvestors = rankInvestors(rawInvestors, profile, DEFAULT_RANKING_WEIGHTS);
 
   // Step 6: Complete
-  emit("complete", 100, `Radar complete: ranked ${rankedInvestors.length} qualified investors backed by ${comparables.length} verified comparable companies.`);
+  emit("complete", 100, `StarAll complete: ranked ${rankedInvestors.length} qualified investors backed by ${comparables.length} verified comparable companies.`);
 
   const run: ResearchRun = {
     schema_version: "1.0.0",

@@ -33,27 +33,27 @@ export function ResearchProgress({ currentEvent, events }: ResearchProgressProps
   const progressPercent = currentEvent?.progress || 15;
 
   return (
-    <div className="bg-[#121722] border border-[#232d3e] rounded-xl p-6 shadow-lg">
+    <div className="bg-[#ffffff] border border-[#e8e4dc] rounded-xl p-6 shadow-sm">
       <div className="flex items-center justify-between mb-4">
         <div>
-          <span className="text-xs font-medium text-sky-400">
+          <span className="text-xs font-medium text-amber-800">
             Investigation in progress
           </span>
-          <h3 className="text-sm font-semibold text-slate-100 mt-0.5">
+          <h3 className="text-sm font-semibold text-stone-900 mt-0.5">
             Extracting funding evidence &amp; calculating fit scores
           </h3>
         </div>
         <div className="text-right">
-          <span className="text-xl font-mono font-bold text-sky-400">
+          <span className="text-xl font-mono font-bold text-amber-900">
             {progressPercent}%
           </span>
         </div>
       </div>
 
       {/* Progress track */}
-      <div className="w-full bg-[#0a0d14] h-1.5 rounded-full overflow-hidden border border-[#232d3e] mb-6">
+      <div className="w-full bg-[#f0ece1] h-1.5 rounded-full overflow-hidden border border-[#ded8cb] mb-6">
         <div
-          className="h-full bg-sky-500 transition-all duration-300 rounded-full"
+          className="h-full bg-stone-900 transition-all duration-300 rounded-full"
           style={{ width: `${progressPercent}%` }}
         />
       </div>
@@ -69,21 +69,21 @@ export function ResearchProgress({ currentEvent, events }: ResearchProgressProps
               key={st.key}
               className={`p-2.5 rounded-lg border transition-all ${
                 isDone
-                  ? "bg-[#141d2a] border-[#25354b] text-slate-200"
+                  ? "bg-[#f8f6f0] border-[#ded8cb] text-stone-900"
                   : isCurrent
-                  ? "bg-[#182333] border-sky-500/60 text-slate-100"
-                  : "bg-[#0c1017] border-[#1e2736] text-slate-400"
+                  ? "bg-[#ffffff] border-stone-900 text-stone-900 shadow-xs"
+                  : "bg-[#fbfaf7] border-[#eeebe2] text-stone-400"
               }`}
             >
               <div className="flex items-center space-x-1.5 mb-1">
                 {isDone ? (
-                  <CheckCircle2 className="w-3.5 h-3.5 text-sky-400 flex-shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-stone-800 flex-shrink-0" />
                 ) : isCurrent ? (
-                  <Loader2 className="w-3.5 h-3.5 text-sky-400 animate-spin flex-shrink-0" />
+                  <Loader2 className="w-3.5 h-3.5 text-amber-800 animate-spin flex-shrink-0" />
                 ) : (
-                  <Circle className="w-3.5 h-3.5 text-slate-600 flex-shrink-0" />
+                  <Circle className="w-3.5 h-3.5 text-stone-300 flex-shrink-0" />
                 )}
-                <span className="text-[11px] font-mono text-slate-400">
+                <span className="text-[11px] font-mono text-stone-500">
                   Step {idx + 1}
                 </span>
               </div>
@@ -94,22 +94,22 @@ export function ResearchProgress({ currentEvent, events }: ResearchProgressProps
       </div>
 
       {/* Activity Log */}
-      <div className="bg-[#0c1017] border border-[#20293a] rounded-lg p-3.5 font-mono text-xs text-slate-300 space-y-1 max-h-44 overflow-y-auto">
-        <div className="text-[11px] text-slate-400 font-medium mb-1.5">
+      <div className="bg-[#f8f6f0] border border-[#e8e4dc] rounded-lg p-3.5 font-mono text-xs text-stone-800 space-y-1 max-h-44 overflow-y-auto">
+        <div className="text-[11px] text-stone-500 font-medium mb-1.5">
           Live execution trace
         </div>
         {events.length === 0 ? (
-          <p className="text-slate-400 italic">Initializing agent pipeline...</p>
+          <p className="text-stone-400 italic">Initializing agent pipeline...</p>
         ) : (
           events.map((ev, i) => (
             <div key={i} className="flex items-start space-x-2 text-[11px] leading-relaxed">
-              <span className="text-slate-400 flex-shrink-0">
+              <span className="text-stone-500 flex-shrink-0">
                 {ev.timestamp.slice(11, 19)}
               </span>
-              <span className="text-sky-400/80 font-semibold flex-shrink-0">
+              <span className="text-amber-800 font-semibold flex-shrink-0">
                 [{ev.step}]
               </span>
-              <span className="text-slate-300">{ev.message}</span>
+              <span className="text-stone-800">{ev.message}</span>
             </div>
           ))
         )}

@@ -1,7 +1,7 @@
 {
-  "name": "funding-radar",
+  "name": "starall",
   "version": "1.0.0",
-  "description": "General-purpose TinyFish-powered funding intelligence agent and radar",
+  "description": "StarAll — Autonomous TinyFish and TinySet-powered investor intelligence agent",
   "type": "module",
   "scripts": {
     "dev": "next dev",

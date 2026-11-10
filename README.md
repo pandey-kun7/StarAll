@@ -1,4 +1,4 @@
-# Funding Radar 🎯
+# StarAll 🎯
 > **Autonomous Investor Intelligence Agent Powered by TinyFish & TinySet**
 >
 > A founder enters a concise description of their startup; the system discovers recently funded comparable companies with **TinySet**, verifies funding rounds through primary source announcements, and delivers a ranked, actionable list of investors with concrete evidence and verified approach routes.
@@ -36,7 +36,7 @@ Early-stage founders spend weeks cold-emailing the wrong venture firms. Static V
 * **Volume-Biased:** Mega-funds like a16z or Insight rank at the top of every single search, burying the high-conviction domain specialists who actually lead seed rounds in that specific vertical.
 
 ### The Solution
-**Funding Radar** turns investor discovery into an autonomous, evidence-backed forensic investigation:
+**StarAll** turns investor discovery into an autonomous, evidence-backed forensic investigation:
 1. **Live Web Crawling via TinySet:** Extracts recently funded peers within a configurable lookback window (12, 15, or 18 months).
 2. **Primary Source Corroboration:** Every company, round amount, announcement date, and investor role links directly to a verifiable public press release or company disclosure.
 3. **Transparent 100-Point Ranking:** Scores investors deterministically using 7 objective dimensions with diminishing returns on deal count, ensuring specialized seed leads outrank generalist giants.
@@ -57,7 +57,7 @@ Early-stage founders spend weeks cold-emailing the wrong venture firms. Static V
 
 ## ⚡ How TinySet Powers Live Discovery
 
-TinySet (`@tiny-fish/sdk` `client.datasets`) is the **core structured discovery engine** of Funding Radar. Rather than scraping static HTML or relying on brittle regex:
+TinySet (`@tiny-fish/sdk` `client.datasets`) is the **core structured discovery engine** of StarAll. Rather than scraping static HTML or relying on brittle regex:
 
 ### 1. Dynamic Extraction Schema Generation
 When a founder enters their startup pitch, the engine synthesizes their core thesis and builds a typed **TinySet specification**:
@@ -160,7 +160,7 @@ If live web crawling encounters API authentication or rate limits, the orchestra
 
 ## 🚀 The Four Pre-Audited Benchmark Profiles
 
-Funding Radar includes four deeply researched, pre-audited benchmark profiles to allow instant testing with verified data:
+StarAll includes four deeply researched, pre-audited benchmark profiles to allow instant testing with verified data:
 
 ### 1. Climate-Tech & Circular Economy: Smart Waste & Incentivized Recycling
 * **Pitch:** Verified circular waste marketplace connecting households, collectors, and processors with reward incentives, smart collection logistics, and traceable environmental outcome reporting.
@@ -190,7 +190,7 @@ Funding Radar includes four deeply researched, pre-audited benchmark profiles to
 
 ## 🎨 UI Design & Aesthetic Philosophy
 
-Built in strict adherence to the design principles in [`skills.md`](file:///c:/Users/Administrator/projects/starall/skills.md), Funding Radar rejects generic AI-generated templates:
+Built in strict adherence to the design principles in [`skills.md`](file:///c:/Users/Administrator/projects/starall/skills.md), StarAll rejects generic AI-generated templates:
 
 * **Forensic Dossier Aesthetic:** Deep oceanic obsidian ink (`#0a0d14` / `#121722`) with hairline borders (`#232d3e`), completely eliminating generic blur spheres and neon gradient washes.
 * **Intentional Telemetry Palette:** High-contrast electric cyan (`#38bdf8`) for mathematical fit scores; warm archival amber (`#f59e0b`) for verified source citations.
@@ -202,7 +202,7 @@ Built in strict adherence to the design principles in [`skills.md`](file:///c:/U
 
 ## 🔌 API Contract & Schema Specification (v1.0.0)
 
-Funding Radar exposes a versioned JSON REST API and Server-Sent Events (SSE) streaming endpoint:
+StarAll exposes a versioned JSON REST API and Server-Sent Events (SSE) streaming endpoint:
 
 ### Endpoints
 * `POST /api/research`: Executes or streams research.
@@ -276,7 +276,7 @@ Funding Radar exposes a versioned JSON REST API and Server-Sent Events (SSE) str
 
 ## 🔔 TinyFish Recurring Monitors
 
-Funding Radar integrates directly with TinyFish's **Monitors API** (`client.monitors`):
+StarAll integrates directly with TinyFish's **Monitors API** (`client.monitors`):
 1. **Automated Search Monitors:** Founders can schedule weekly or daily monitors for newly announced funding rounds matching their exact startup profile and keywords.
 2. **Execution & History:** View past runs, discovered deals, and delete active monitors directly within the modal.
 3. Accessible via the **"Set recurring monitor"** button on the results dashboard.
@@ -329,13 +329,13 @@ npm run start
 ## 📝 Bounty Submission Notes & Social Post
 
 ### How TinySet Was Utilized
-> Funding Radar utilizes **TinySet** as its primary live-web discovery engine. For any startup description entered by a founder, the system synthesizes the business model and compiles a typed TinySet extraction specification (capturing company name, round amount, round date, lead investor, source link, and citation passage). TinySet crawls the web to populate this dataset with recent, relevant comparable companies. Supplementary TinyFish Search and Fetch calls corroborate citations against primary press releases and company disclosures.
+> StarAll utilizes **TinySet** as its primary live-web discovery engine. For any startup description entered by a founder, the system synthesizes the business model and compiles a typed TinySet extraction specification (capturing company name, round amount, round date, lead investor, source link, and citation passage). TinySet crawls the web to populate this dataset with recent, relevant comparable companies. Supplementary TinyFish Search and Fetch calls corroborate citations against primary press releases and company disclosures.
 
 ### Social Post Draft (for LinkedIn / X tagging @TinyFish)
 ```text
-Excited to unveil Funding Radar — an autonomous investor intelligence agent powered by @TinyFish! 🎯
+Excited to unveil StarAll — an autonomous investor intelligence agent powered by @TinyFish! 🎯
 
-Early-stage founders spend weeks cold-emailing the wrong venture firms. Funding Radar solves this with TinySet:
+Early-stage founders spend weeks cold-emailing the wrong venture firms. StarAll solves this with TinySet:
 1️⃣ Enter any startup description (deep-tech, B2B SaaS, climate, biotech)
 2️⃣ TinySet discovers recently funded comparable companies from the live web
 3️⃣ Primary press releases & disclosures are corroborated for verified round sizes & dates
@@ -351,4 +351,4 @@ Built with Next.js 16, React 19, TypeScript, Tailwind, and @TinyFish.
 ---
 
 ## ⚖️ Disclaimer
-*Funding Radar is an automated investor intelligence tool based on publicly disclosed announcements, company blogs, and official filings. It does not provide financial or investment advice. Approach routes, cheque ranges, and partner attributions are subject to change by respective venture firms.*
+*StarAll is an automated investor intelligence tool based on publicly disclosed announcements, company blogs, and official filings. It does not provide financial or investment advice. Approach routes, cheque ranges, and partner attributions are subject to change by respective venture firms.*
